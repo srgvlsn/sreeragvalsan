@@ -35,6 +35,8 @@ body
   background-image: url(./images/hero_horizontal-resized.webp);
   background-size:cover;
   background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 nav
 {
@@ -121,7 +123,7 @@ nav ul li a:hover::after
 .about-column-1 img
 {
   width: 100%;
-  height: 100%;
+  height: fit-content;
   border: none;
   border-radius: 60px;
 }
@@ -363,7 +365,7 @@ nav ul li a:hover::after
 /* Contact Section */
 .contact-left
 {
-  flex-basis: 35%;
+  flex-basis: 39%;
 }
 .contact-left p
 {
@@ -541,7 +543,7 @@ nav .fa-solid /*.fa-xmark, nav .fa-bars */
   }
   .header-li-titles
   {
-    font-size: 40px;
+    font-size: 50px;
   }
   .about-column-1, .about-column-2
   {
@@ -579,4 +581,86 @@ nav .fa-solid /*.fa-xmark, nav .fa-bars */
   color: #c48954;
   margin-top: -10px;
   display: block;
+}
+@media only screen and (min-width: 600px) and (max-width: 730px)
+{
+  #header
+  {
+    background-image: url(./images/hero_vertical-resized1610.webp);
+    background-size: cover;
+    height: 100vh;
+  }
+  .about-column-2 p
+  {
+    line-height: 1.7;
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 780px)
+{
+  #header
+  {
+    background-image: url(./images/hero_almostsquare-resized.webp);
+    background-size: cover;
+    height: 100vh;
+  }
+  nav .fa-solid
+  {
+    display: block;
+  }
+  nav ul
+  {
+    background: #cd1d20;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+  nav ul li
+  {
+    display: block;
+    margin: 25px;
+  }
+  nav ul .fa-solid
+  {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+  .about-column-1, .about-column-2
+  {
+    flex-basis: 100%;
+  }
+  .about-column-1
+  {
+    margin-bottom: 40px;
+  }
+  .about-column-2
+  {
+    font-size: 14px;
+  }
+  .about-column-2 p
+  {
+    line-height: 1.7;
+    text-align: justify;
+  }
+  .about-subtabs-links
+  {
+    font-size: 16px;
+    margin-right: 40px;
+  }
+}
+@media only screen and (min-width: 777px) and (max-width: 885px)
+{
+  #header
+  {
+    background-image: url(./images/hero_almosthorizontal-resized.webp);
+    background-size: cover;
+    height: 100vh;
+  }
 }
