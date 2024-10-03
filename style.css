@@ -87,7 +87,7 @@ nav ul li a:hover::after
 }
 .header-text
 {
-  margin-top: 15%;
+  margin-top: 18%;
   font-size: 30px;
 }
 .header-text p
@@ -458,27 +458,51 @@ form .btn2
 }
 .footer-greetings
 {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  flex-basis: 40%;
 }
-.footer-greetings img
+.footer-logo
+{
+  flex-basis: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-logo img
 {
   height: 40px;
   width: 40px;
   transition: transform 0.5s;
 }
-.footer-greetings img:hover
+.footer-logo img:hover
 {
   transform: scale(1.5);
 }
-
-/* Responiveness for mobile screens */
+.footer-copyright
+{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 40%;
+  font-size: 14px;
+}
+.footer-copyright .fa-copyright
+{
+  color: #ff0000;
+}
+#message
+{
+  color: #c48954;
+  margin-top: -10px;
+  display: block;
+}
 nav .fa-solid /*.fa-xmark, nav .fa-bars */
 {
   display: none;
 }
+/* Responiveness for mobile screens */
 @media only screen and (max-width: 600px)
 {
   #header
@@ -489,7 +513,7 @@ nav .fa-solid /*.fa-xmark, nav .fa-bars */
   }
   .header-text
   {
-    margin-top: 72%;
+    margin-top: 52%;
     font-size: 30px;
   }
   .header-text h1
@@ -571,16 +595,35 @@ nav .fa-solid /*.fa-xmark, nav .fa-bars */
   {
     flex-basis: 100%;
   }
+  .social-icons a
+  {
+    margin: 20px 40px 20px 0px;
+    display: inline-flexbox;
+  }
+  #footer .container
+  {
+    height: 200px;
+  }
   .footer-greetings
   {
-    text-align:center;
+    flex-basis: 100%;
+    margin: 0px 0 10px 0;
   }
-}
-#message
-{
-  color: #c48954;
-  margin-top: -10px;
-  display: block;
+  .footer-logo
+  {
+    flex-basis: 100%;
+    margin: 10px;
+  }
+  .footer-copyright
+  {
+    flex-basis: 100%;
+    margin: 0px 0 10px 0;
+    color: #ffffff7d;
+  }
+  .footer-copyright .fa-copyright
+  {
+    color: #ff00009d;
+  }
 }
 @media only screen and (min-width: 600px) and (max-width: 730px)
 {
@@ -590,19 +633,64 @@ nav .fa-solid /*.fa-xmark, nav .fa-bars */
     background-size: cover;
     height: 100vh;
   }
+  .header-text
+  {
+    margin-top: 42%;
+    font-size: 30px;
+  }
+  .header-text h1
+  {
+    font-size: 40px;
+  }
   .about-column-2 p
   {
     line-height: 1.7;
     text-align: left;
   }
+  .contact-left, .contact-right
+  {
+    flex-basis: 100%;
+  }
+  #footer .container
+  {
+    height: 200px;
+  }
+  .footer-greetings
+  {
+    flex-basis: 100%;
+    margin: 0px 0 10px 0;
+  }
+  .footer-logo
+  {
+    flex-basis: 100%;
+    margin: 10px;
+  }
+  .footer-copyright
+  {
+    flex-basis: 100%;
+    margin: 0px 0 10px 0;
+    color: #ffffff7d;
+  }
+  .footer-copyright .fa-copyright
+  {
+    color: #ff00009d;
+  }
 }
-@media only screen and (min-width: 600px) and (max-width: 780px)
+@media only screen and (min-width: 600px) and (max-width: 781px)
 {
   #header
   {
     background-image: url(./images/hero_almostsquare-resized.webp);
     background-size: cover;
     height: 100vh;
+  }
+  .header-text
+  {
+    margin-top: 42%;
+  }
+  .header-text h1
+  {
+    font-size: 45px;
   }
   nav .fa-solid
   {
@@ -654,6 +742,25 @@ nav .fa-solid /*.fa-xmark, nav .fa-bars */
     font-size: 16px;
     margin-right: 40px;
   }
+  #footer .container
+  {
+    height: 200px;
+  }
+  .footer-greetings
+  {
+    flex-basis: 100%;
+    margin: 0px 0 10px 0;
+  }
+  .footer-logo
+  {
+    flex-basis: 100%;
+    margin: 10px;
+  }
+  .footer-copyright
+  {
+    flex-basis: 100%;
+    margin: 0px 0 10px 0;
+  }
 }
 @media only screen and (min-width: 777px) and (max-width: 885px)
 {
@@ -662,5 +769,41 @@ nav .fa-solid /*.fa-xmark, nav .fa-bars */
     background-image: url(./images/hero_almosthorizontal-resized.webp);
     background-size: cover;
     height: 100vh;
+  }
+  .header-text h1
+  {
+    font-size: 50px;
+  }
+}
+@media only screen and (min-width:781px) and (max-width: 910px)
+{
+  .footer-greetings
+  {
+    flex-basis: 35%;
+    margin: 0px 0 10px 0;
+    font-size: 13px;
+  }
+  .footer-logo
+  {
+    flex-basis: 20%;
+    margin: 10px;
+  }
+  .footer-copyright
+  {
+    flex-basis: 35%;
+    margin: 0px 0 10px 0;
+    font-size: 12px;
+    text-align: right;
+  }
+}
+@media only screen and (min-width: 777px) and (max-width: 1180px)
+{
+  .header-text
+  {
+    margin-top: 25%;
+  }
+  .header-text h1
+  {
+    font-size: 60px;
   }
 }
