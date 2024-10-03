@@ -1,0 +1,74 @@
+@font-face 
+{
+  font-family: 'sans-r';
+  src: url(./font/Product\ Sans\ Regular.ttf);
+}
+@font-face 
+{
+  font-family: 'sans-b';
+  src: url(./font/Product\ Sans\ Bold.ttf);
+}
+/* General settings */
+*
+{
+  margin: 0;
+  padding: 0;
+  font-family: 'sans-r';
+  box-sizing: border-box;
+  letter-spacing: 0.4px;
+}
+html
+{
+  scroll-behavior: smooth;
+}
+body
+{
+  background: #080808;
+  color: #fdfdfd;
+  overflow-x: hidden;
+  align-items: center;
+  justify-content: center;
+}
+.container
+{
+  padding: 10px 15%;
+}
+.header-text
+{
+  margin-top: 3%;
+  font-size: 30px;
+}
+.header-logo p
+{
+  font-size: 15px;
+  margin-top: 30px;
+  line-height: 1.7;
+  text-align: justify;
+}
+.header-text h1
+{
+  font-size: 70px;
+  text-align: center;
+}
+.header-text span
+{
+  color: #cd1d20; 
+}
+.header-logo
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 100%;
+  margin: 50px;
+}
+.detail-text
+{
+  text-align: center;
+}
+.detail-text img
+{
+  margin: 30px;
+  width: 70px;
+  height: 70px;
+}

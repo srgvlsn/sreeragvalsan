@@ -48,3 +48,29 @@ function closeMenuOnOutsideClick(event)
     closeMenu(); // Close the menu if clicked outside
   }
 }
+//
+var copyrightIcon = document.getElementById("copyright-icon");// Get the copyright icon element
+copyrightIcon.addEventListener("click", function(event) // Add a click event listener to trigger the alert
+{
+  event.preventDefault(); // Prevent the default link behavior
+  alert('This is a copyright notice! \nPlease check it out in Copyright document \nAccess it by clicking on the logo on the footer');
+});
+//  
+var scrollToTopButton = document.getElementById("scrollToTop"); // Get the scroll to top button
+window.onscroll = function() // Show or hide the button based on scroll position 
+{
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) 
+  {
+    scrollToTopButton.style.display = "block"; // Show button
+  }
+  else
+  {
+    scrollToTopButton.style.display = "none"; // Hide button
+  }
+};
+scrollToTopButton.addEventListener("click", function(event) // Scroll smoothly to the top when the button is clicked
+{
+  event.preventDefault(); // Prevent default link behavior
+  window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
+});
+// 

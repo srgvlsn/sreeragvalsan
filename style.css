@@ -500,11 +500,20 @@ form .btn2
   justify-content: center;
   align-items: center;
   flex-basis: 40%;
-  font-size: 14px;
 }
 .footer-copyright .fa-copyright
 {
+  color: #ffffff;
+  font-size: 13px;
+}
+.footer-copyright .fa-copyright:hover
+{
   color: #ff0000;
+}
+
+.footer-copyright .fa-trademark
+{
+  font-size: 5px;
 }
 #message
 {
@@ -512,6 +521,33 @@ form .btn2
   margin-top: -10px;
   display: block;
 }
+/* top scroller */
+#scrollToTop
+{
+  text-decoration: none;
+  display: inline-block;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 25px; 
+  right: 25px; 
+  background-color: #c71414; 
+  color: #ffffff; 
+  border-radius: 50%; 
+  padding: 10px; 
+  text-align: center;
+  align-items: center;
+  font-size: 25px; 
+  display: none;
+  z-index: 1000; 
+  cursor: pointer;
+}
+.scrollToTop:hover 
+{
+  background-color: #ff0000;
+  color: #0a0a0a;
+}
+
 nav .fa-solid /*.fa-xmark, nav .fa-bars */
 {
   display: none;
