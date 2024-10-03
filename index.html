@@ -16,19 +16,19 @@
 <body>
   <!-- Header -->
   <div id="header">
+    <nav>
+      <a href="index.html" class="logo"><img src="logos/SV.white.header.svg" type="image/svg" class="logo" alt="Logo"></a>
+      <ul id="sidemenu">
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+      </ul>
+      <i class="fa-solid fa-burger" onclick="openMenu()"></i>
+    </nav>
     <div class="container">
-      <nav>
-        <a href="index.html" class="logo"><img src="logos/SV.white.header.svg" type="image/svg" class="logo" alt="Logo"></a>
-        <ul id="sidemenu">
-          <li><a href="#header">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
-        </ul>
-        <i class="fa-solid fa-bars" onclick="openMenu()"></i>
-      </nav>
       <div class="header-text">
         <p>HI ! WELCOME TO MY WEBSITE</p>
         <h1>I'm <span>Sreerag Valsan</span></h1>
@@ -187,6 +187,7 @@
       </div>
     </div>
   </div>
+  <!-- Script file and Form's Script -->
   <script src="script.js"></script>
   <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbxk6Agu8HuxXOV-TUEXcW-_Pb3N_i0rpNmAq3oPEGK6jIwq_sCczDzlEyT7exQ39TbB/exec'
@@ -195,9 +196,11 @@
     form.addEventListener('submit', e => {
       e.preventDefault()
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
+      .then(response => 
+      {
         message.innerHTML = "The message sent successfully"
-        setTimeout(function() {
+        setTimeout(function() 
+        {
           message.innerHTML = ""
         }, 5000)
         form.reset()

@@ -44,6 +44,17 @@ nav
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  width: 80%;
+  padding: 10px 0px;
+  margin: 0 10%;
+  transition: background-color 0.3s;
+  z-index: 1000;
+}
+nav.scrolled 
+{
+  background-color: #080808;
 }
 nav ul li
 {
@@ -109,6 +120,7 @@ nav ul li a:hover::after
 #about
 {
   padding: 80px 0;
+  padding-top: 100px;
 }
 .row
 {
@@ -201,7 +213,8 @@ nav ul li a:hover::after
 /* Sevices Section */
 #services
 {
-  padding: 30px 0;
+  padding: 80px 0;
+  padding-top: 100px;
 }
 .services-list
 {
@@ -277,7 +290,8 @@ nav ul li a:hover::after
 /* Projects Section */
 #projects
 {
-  padding: 50px 0;
+  padding: 80px 0;
+  padding-top: 80px;
 }
 .project-list
 {
@@ -454,7 +468,7 @@ form .btn2
   align-items: center;
   flex-wrap: wrap;
   height: 100px;
-  background-color: #0a0a0a
+  background-color: #3d3d3d
 }
 .footer-greetings
 {
@@ -517,7 +531,7 @@ nav .fa-solid /*.fa-xmark, nav .fa-bars */
   }
   .header-text
   {
-    margin-top: 65%;
+    margin-top: 70%;
     font-size: 30px;
   }
   .header-text h1
@@ -595,6 +609,11 @@ nav .fa-solid /*.fa-xmark, nav .fa-bars */
     font-size: 16px;
     margin-right: 40px;
   }
+  #contact
+  {
+    padding: 80px 0;
+    padding-top: 80px;
+  }
   .contact-left, .contact-right
   {
     flex-basis: 100%;
@@ -603,6 +622,10 @@ nav .fa-solid /*.fa-xmark, nav .fa-bars */
   {
     margin: 20px 40px 20px 0px;
     display: inline-flexbox;
+  }
+  .btn.btn2
+  {
+    margin-bottom: -20px;
   }
   #footer .container
   {
@@ -651,9 +674,18 @@ nav .fa-solid /*.fa-xmark, nav .fa-bars */
     line-height: 1.7;
     text-align: left;
   }
+  #contact
+  {
+    padding: 80px 0;
+    padding-top: 80px;
+  }
   .contact-left, .contact-right
   {
     flex-basis: 100%;
+  }
+  .btn.btn2
+  {
+    margin-bottom: -20px;
   }
   #footer .container
   {
@@ -745,6 +777,11 @@ nav .fa-solid /*.fa-xmark, nav .fa-bars */
   {
     font-size: 16px;
     margin-right: 40px;
+  }
+  #contact
+  {
+    padding: 80px 0;
+    padding-top: 80px;
   }
   #footer .container
   {
