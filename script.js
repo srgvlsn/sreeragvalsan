@@ -48,4 +48,3 @@ function closeMenuOnOutsideClick(event)
     closeMenu(); // Close the menu if clicked outside
   }
 }
-// 
