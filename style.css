@@ -49,8 +49,8 @@ nav
   width: 80%;
   padding: 10px 0px;
   margin: 0 10%;
-  transition: background-color 0.3s;
   z-index: 1000;
+  transition: background-color 0.3s;
 }
 nav.scrolled 
 {
