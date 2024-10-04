@@ -210,6 +210,51 @@ nav ul li a:hover::after
 {
   display: block;
 }
+/* Skills Section */
+#skills
+{
+  padding: 80px 0;
+  padding-top: 100px;
+}
+.skills-list
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.skills-list div
+{
+  width: auto;
+  height: 150px;
+  background: #111111;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: background 0.5s, transform 0.5s;
+  border-radius: 80px;
+  color: #c48954;
+}
+.skills-list div img
+{
+  width: 70px;
+  height: 70px;
+}
+.skills-list div p
+{
+  margin-top: 10px;
+  text-align: center;
+}
+.skills-list div:hover
+{
+  background: #c71414;
+  transform: translateY(-10px);
+  color: #ffffff;
+}
 /* Sevices Section */
 #services
 {
@@ -850,6 +895,38 @@ nav .fa-solid /*.fa-xmark, nav .fa-bars */
   .header-text h1
   {
     font-size: 50px;
+  }
+  .header-text
+  {
+    margin-top: 42%;
+  }
+  nav .fa-solid
+  {
+    display: block;
+  }
+  nav ul
+  {
+    background: #cd1d20;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+  nav ul li
+  {
+    display: block;
+    margin: 25px;
+  }
+  nav ul .fa-solid
+  {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
   }
 }
 @media only screen and (min-width:781px) and (max-width: 910px)
