@@ -223,11 +223,15 @@ nav ul li a:hover::after
   grid-gap: 40px;
   margin-top: 50px;
 }
+.skills-list a
+{
+  text-decoration: none;
+}
 .skills-list div
 {
   width: auto;
   height: 150px;
-  background: #111111;
+  background: #c7141468;
   padding: 10px;
   font-size: 14px;
   font-weight: 300;
@@ -243,6 +247,9 @@ nav ul li a:hover::after
 {
   width: 70px;
   height: 70px;
+  filter: sepia(100%) hue-rotate(12deg) saturate(400%) brightness(100%);
+  transition: filter 0.5s, transform 0.5s;
+  opacity: 0.8;
 }
 .skills-list div p
 {
@@ -251,9 +258,13 @@ nav ul li a:hover::after
 }
 .skills-list div:hover
 {
-  background: #c71414;
-  transform: translateY(-10px);
+  background: #111111;
+  transform: scale(1.1);
   color: #ffffff;
+}
+.skills-list div:hover img 
+{
+  filter: none;
 }
 /* Sevices Section */
 #services
@@ -666,6 +677,7 @@ nav .fa-solid /*.fa-xmark, nav .fa-bars */
   }
   .header-li-titles
   {
+    text-align: center;
     font-size: 50px;
   }
   .about-column-1, .about-column-2
@@ -683,7 +695,7 @@ nav .fa-solid /*.fa-xmark, nav .fa-bars */
   .about-column-2 p
   {
     line-height: 1.7;
-    text-align: left;
+    text-align: justify;
   }
   .about-subtabs-links
   {
@@ -750,6 +762,11 @@ nav .fa-solid /*.fa-xmark, nav .fa-bars */
   {
     font-size: 40px;
   }
+  .header-li-titles
+  {
+    text-align: center;
+    font-size: 50px;
+  }
   .about-column-2 p
   {
     line-height: 1.7;
@@ -809,6 +826,11 @@ nav .fa-solid /*.fa-xmark, nav .fa-bars */
   {
     font-size: 45px;
   }
+  .header-li-titles
+  {
+    text-align: center;
+    font-size: 50px;
+  }
   nav .fa-solid
   {
     display: block;
@@ -863,6 +885,15 @@ nav .fa-solid /*.fa-xmark, nav .fa-bars */
   {
     padding: 80px 0;
     padding-top: 80px;
+  }
+  .contact-left, .contact-right
+  {
+    flex-basis: 100%;
+  }
+  .btn.btn2
+  {
+    margin-bottom: -20px;
+    
   }
   #footer .container
   {
