@@ -64,12 +64,19 @@ var scrollToTopButton = document.getElementById("scrollToTop"); // Get the scrol
 window.onscroll = function() // Show or hide the button based on scroll position 
 {
   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) 
+  // {
+  //   scrollToTopButton.style.display = "block"; // Show button
+  // }
+  // else                               kept for previous usage reference
+  // {
+  //   scrollToTopButton.style.display = "none"; // Hide button
+  // }
   {
-    scrollToTopButton.style.display = "block"; // Show button
-  }
-  else
+    scrollToTopButton.classList.add("visible"); // Add 'visible' class to show the button smoothly
+  } 
+  else 
   {
-    scrollToTopButton.style.display = "none"; // Hide button
+    scrollToTopButton.classList.remove("visible"); // Remove 'visible' class to hide the button smoothly
   }
 };
 scrollToTopButton.addEventListener("click", function(event) // Scroll smoothly to the top when the button is clicked
@@ -77,4 +84,4 @@ scrollToTopButton.addEventListener("click", function(event) // Scroll smoothly t
   event.preventDefault(); // Prevent default link behavior
   window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
 });
-// 
+//
