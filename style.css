@@ -523,8 +523,7 @@ hr
   height: 1px;
   border: none; 
   border-radius: 50%; 
-  background-color: #ff0000;
-  color: #c71414;
+  background: linear-gradient(to right, #ff000000, #ff000025 50%, #ff000000);
 }
 /* Footer */
 #footer .container
