@@ -54,6 +54,10 @@ body
 {
   color: #cd1d20; 
 }
+.header-text p
+{
+  font-size: 53px;
+}
 .header-logo
 {
   display: flex;
