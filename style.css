@@ -442,6 +442,11 @@ nav ul li a:hover::after
 {
   margin-top: 20px;
 }
+.contact-left p a
+{
+  text-decoration: none;
+  color: #ffffff;
+}
 .fa-envelope, .fa-phone, .fa-globe
 {
   font-size: 13px;

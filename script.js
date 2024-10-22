@@ -85,3 +85,10 @@ scrollToTopButton.addEventListener("click", function(event) // Scroll smoothly t
   window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
 });
 //
+// 
+document.addEventListener('contextmenu', function(event) 
+{
+  event.preventDefault(); // Prevent the default right-click context menu
+  // alert("Right-click is disabled on this site.");
+});
+// 
