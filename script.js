@@ -1,4 +1,4 @@
-// 
+//
 var navbar = document.querySelector("nav");
 function handleScroll() // Function to handle scroll events
 {
@@ -13,7 +13,7 @@ function handleScroll() // Function to handle scroll events
 }
 window.addEventListener("scroll", handleScroll); // Attach scroll event listener
 //
-//  
+//
 var aboutSubtabsLinks = document.getElementsByClassName("about-subtabs-links");
 var aboutSubtabsContents = document.getElementsByClassName("about-subtabs-contents");
 function openTab(tabName)
@@ -30,7 +30,7 @@ function openTab(tabName)
   document.getElementById(tabName).classList.add("active-tab");
 }
 //
-// 
+//
 var sidemenu = document.getElementById("sidemenu");
 function openMenu()
 {
@@ -51,15 +51,15 @@ function closeMenuOnOutsideClick(event)
   }
 }
 //
-// 
+//
 var copyrightIcon = document.getElementById("copyright-icon");// Get the copyright icon element
 copyrightIcon.addEventListener("click", function(event) // Add a click event listener to trigger the alert
 {
   event.preventDefault(); // Prevent the default link behavior
   alert('This is a copyright notice! \nPlease check it out in Copyright document \nAccess it by clicking on the logo on the footer');
 });
-// 
-//  
+//
+//
 var scrollToTopButton = document.getElementById("scrollToTop"); // Get the scroll to top button
 window.onscroll = function() // Show or hide the button based on scroll position 
 {
@@ -85,10 +85,10 @@ scrollToTopButton.addEventListener("click", function(event) // Scroll smoothly t
   window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
 });
 //
-// 
+//
 document.addEventListener('contextmenu', function(event) 
 {
   event.preventDefault(); // Prevent the default right-click context menu
   // alert("Right-click is disabled on this site.");
 });
-// 
+//
