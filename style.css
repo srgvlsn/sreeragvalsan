@@ -528,7 +528,7 @@ hr
   height: 1px;
   border: none; 
   border-radius: 50%; 
-  background: linear-gradient(to right, #ff000000, #ff000025 50%, #ff000000)
+  background: linear-gradient(to right, #ff000000, #ff000025 50%, #ff000000);
 }
 /* Footer */
 #footer .container
