@@ -187,6 +187,8 @@ nav ul li a:hover::after
 }
 .btn
 {
+  color: #080808;
+  background: #c71414;
   display: block;
   margin: 50px auto;
   width: fit-content;
@@ -194,14 +196,12 @@ nav ul li a:hover::after
   padding: 14px 50px;
   border-radius: 6px;
   text-decoration: none;
-  color: #ffffff;
   transition: background 0.5s;
-
 }
 .btn:hover
 {
-  color: #080808;
-  background: #c71414;
+  color: #ffffff;
+  background: #080808;
 }
 /* Contact Section */
 #contact
