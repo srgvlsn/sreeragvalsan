@@ -364,23 +364,21 @@
   <!-- Script file and Form's Script -->
   <script src="script.js"></script>
   <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxk6Agu8HuxXOV-TUEXcW-_Pb3N_i0rpNmAq3oPEGK6jIwq_sCczDzlEyT7exQ39TbB/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const message = document.getElementById("message")
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => 
-      {
-        message.innerHTML = "The message sent successfully"
-        setTimeout(function() 
-        {
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxk6Agu8HuxXOV-TUEXcW-_Pb3N_i0rpNmAq3oPEGK6jIwq_sCczDzlEyT7exQ39TbB/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const message = document.getElementById('message')
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        message.innerHTML = "Message Sent"
+        setTimeout(function(){
           message.innerHTML = ""
-        }, 5000)
+        },5000)
         form.reset()
       })
       .catch(error => console.error('Error!', error.message))
-    })
-  </script>
+  })
+</script>
 </body>
 </html>

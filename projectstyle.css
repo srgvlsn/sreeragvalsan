@@ -115,6 +115,12 @@ nav ul li a:hover::after
   color: #cd1d20; 
 }
 /* Projects Section */
+.header-li-titles
+{
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-family: 'sans-b';
+}
 #projects
 {
   padding: 90px 0 0 0;
@@ -305,6 +311,10 @@ hr
   background: linear-gradient(to right, #ff000000, #ff000025 50%, #ff000000);
 }
 /* Footer */
+#footer 
+{
+  margin-top: auto;
+}
 #footer .container
 {
   display: flex;
@@ -313,6 +323,7 @@ hr
   flex-wrap: wrap;
   height: 100px;
   background-color: #0f0d0d17;
+  
 }
 .footer-greetings
 {
