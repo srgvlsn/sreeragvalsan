@@ -92,4 +92,3 @@ document.addEventListener('contextmenu', function(event)
   // alert("Right-click is disabled on this site.");
 });
 //
-//
