@@ -18,5 +18,5 @@ You'll be able to connect with me through the links provided on my website.
 
 Thanks for visiting my portfolio!
 
-The project is hosted with Netlify! <br>
+The project is hosted with Netlify! &nbsp;&nbsp;
 Status: [![Netlify Status](https://api.netlify.com/api/v1/badges/0caeea05-cefc-4c5c-83fb-0b83d4acaf1a/deploy-status)](https://app.netlify.com/sites/sreeragvalsan/deploys)
