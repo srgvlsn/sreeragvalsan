@@ -808,3 +808,34 @@ nav .fa-solid /*.fa-xmark, nav .fa-bars */
     margin: 50px auto;
   }
 }
+
+/* Custom Context Menu Styles */
+#custom-context-menu 
+{
+  position: absolute;
+  display: none;
+  background: #0e0e0e;
+  color: #c48954;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+#custom-context-menu ul 
+{
+  list-style: none;
+  margin: 0;
+  padding: 0px 0;
+}
+#custom-context-menu ul li 
+{
+  padding: 8px 20px;
+  cursor: pointer;
+  border-top-left-radius: 15px 15px;
+  border-top-right-radius: 15px 15px;
+  border-bottom-left-radius: 15px 15px;
+  border-bottom-right-radius: 15px 15px;
+}
+#custom-context-menu ul li:hover 
+{
+  background: #ff0000;
+}

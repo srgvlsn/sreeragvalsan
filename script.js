@@ -13,6 +13,7 @@ function handleScroll() // Function to handle scroll events
 }
 window.addEventListener("scroll", handleScroll); // Attach scroll event listener
 //
+
 //
 var aboutSubtabsLinks = document.getElementsByClassName("about-subtabs-links");
 var aboutSubtabsContents = document.getElementsByClassName("about-subtabs-contents");
@@ -30,6 +31,7 @@ function openTab(tabName)
   document.getElementById(tabName).classList.add("active-tab");
 }
 //
+
 //
 var sidemenu = document.getElementById("sidemenu");
 function openMenu()
@@ -51,6 +53,7 @@ function closeMenuOnOutsideClick(event)
   }
 }
 //
+
 //
 var copyrightIcon = document.getElementById("copyright-icon");// Get the copyright icon element
 copyrightIcon.addEventListener("click", function(event) // Add a click event listener to trigger the alert
@@ -59,6 +62,7 @@ copyrightIcon.addEventListener("click", function(event) // Add a click event lis
   alert('This is a copyright notice! \nPlease check it out in Copyright document \nAccess it by clicking on the logo on the footer');
 });
 //
+
 //
 var scrollToTopButton = document.getElementById("scrollToTop"); // Get the scroll to top button
 window.onscroll = function() // Show or hide the button based on scroll position 
@@ -85,10 +89,93 @@ scrollToTopButton.addEventListener("click", function(event) // Scroll smoothly t
   window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
 });
 //
+
 //
-document.addEventListener('contextmenu', function(event) 
-{
-  event.preventDefault(); // Prevent the default right-click context menu
-  // alert("Right-click is disabled on this site.");
+// document.addEventListener('contextmenu', function(event) 
+// {
+//   event.preventDefault(); // Prevent the default right-click context menu
+//   // alert("Right-click is disabled on this site.");
+// });
+//
+
+//
+// JavaScript for custom context menu
+// document.addEventListener("contextmenu", function (e) {
+//   e.preventDefault(); // Prevent default context menu
+//   const contextMenu = document.getElementById("custom-context-menu");
+//   contextMenu.style.display = "block";
+//   contextMenu.style.left = `${e.pageX}px`;
+//   contextMenu.style.top = `${e.pageY}px`;
+// });
+// document.addEventListener("click", function () {
+//   const contextMenu = document.getElementById("custom-context-menu");
+//   if (contextMenu.style.display === "block") {
+//     contextMenu.style.display = "none";
+//   }
+// });
+// 
+
+// 
+// const contextMenu = document.getElementById("custom-context-menu"); // Show custom context menu
+// document.addEventListener("contextmenu", (event) => {
+//   event.preventDefault(); // Prevent the default context menu
+//   contextMenu.style.display = "block";
+//   contextMenu.style.left = `${event.pageX}px`;
+//   contextMenu.style.top = `${event.pageY}px`;
+// });
+// // Hide custom context menu on click
+// document.addEventListener("click", () => {
+//   contextMenu.style.display = "none";
+// });
+// // Handle custom context menu actions
+// document.getElementById("back").addEventListener("click", () => {
+//   window.history.back();
+// });
+// document.getElementById("forward").addEventListener("click", () => {
+//   window.history.forward();
+// });
+// document.getElementById("reload").addEventListener("click", () => {
+//   location.reload();
+// });
+// 
+
+//
+const contextMenu = document.getElementById("custom-context-menu");
+const openNewTabOption = document.getElementById("open-new-tab");
+let targetLink = null; // To store the link being clicked
+// Show custom context menu
+document.addEventListener("contextmenu", (event) => {
+  event.preventDefault(); // Prevent the default context menu
+  contextMenu.style.display = "block";
+  contextMenu.style.left = `${event.pageX}px`;
+  contextMenu.style.top = `${event.pageY}px`;
+  // Check if the target is a link
+  if (event.target.tagName === "A") {
+    targetLink = event.target; // Store the link element
+    openNewTabOption.style.display = "block"; // Show the option
+  }
+  else {
+    targetLink = null; // Reset if not a link
+    openNewTabOption.style.display = "none"; // Hide the option
+  }
 });
-//
+// Hide custom context menu on click
+document.addEventListener("click", () => {
+  contextMenu.style.display = "none";
+});
+// Handle custom context menu actions
+document.getElementById("back").addEventListener("click", () => {
+  window.history.back();
+});
+document.getElementById("forward").addEventListener("click", () => {
+  window.history.forward();
+});
+document.getElementById("reload").addEventListener("click", () => {
+  location.reload();
+});
+openNewTabOption.addEventListener("click", () => {
+  if (targetLink) {
+    window.open(targetLink.href, "_blank"); // Open the link in a new tab
+  }
+});
+// 

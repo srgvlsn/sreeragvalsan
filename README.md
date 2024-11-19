@@ -1,4 +1,4 @@
-## [Sreerag Valsan's Portfolio](https://sreeragvalsan.netlify.app/)
+# [Sreerag Valsan's Portfolio](https://sreeragvalsan.netlify.app/)
 
 Welcome to my portfolio website! This is the place where I showcase my work and where you can connect with me.
 

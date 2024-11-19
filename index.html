@@ -361,6 +361,15 @@
       </div>
     </div>
   </div>
+  <!-- Custom Context Menu -->
+<div id="custom-context-menu">
+  <ul>
+    <li id="open-new-tab" style="display: none;">Open in New Tab</li>
+    <li id="back">Back</li>
+    <li id="forward">Forward</li>
+    <li id="reload">Reload</li>
+  </ul>
+</div>
   <!-- Script file and Form's Script -->
   <script src="script.js"></script>
   <script>
@@ -371,7 +380,7 @@
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => {
-        message.innerHTML = "Message Sent"
+        message.innerHTML = "Message Sent Sucessfully"
         setTimeout(function(){
           message.innerHTML = ""
         },5000)

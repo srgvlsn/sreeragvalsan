@@ -9,9 +9,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sreerag's Portfolio Copyright Document</title>
   <link rel="icon" type="image/icon" href="./logos/SV.black.favicon-large.ico">
+  <link rel="stylesheet" href="copyrightstyle.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <script src="https://kit.fontawesome.com/6591f3cf48.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./copyrightstyle.css">
 </head>
 <body>
   <div class="container">
@@ -34,5 +34,33 @@
       <img src="./logos/SV.black-round-removebg-preview.webp" alt="Footer Logo">
     </div>
   </div>
+  <div id="custom-menu">
+    <ul>
+      <li>Thank You for visiting my site</li>
+    </ul>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const customMenu = document.getElementById('custom-menu');
+      // Show custom context menu on right-click
+      document.addEventListener('contextmenu', (e) => {
+        e.preventDefault(); // Prevent the default context menu
+        customMenu.style.top = `${e.pageY}px`;
+        customMenu.style.left = `${e.pageX}px`;
+        customMenu.style.display = 'block';
+      });
+      // Hide custom context menu on click elsewhere
+      document.addEventListener('click', () => {
+        customMenu.style.display = 'none';
+      });
+    });
+  </script>
+  <noscript>
+    <style>#custom-menu { display: none; }</style>
+    <div style="color: red; text-align: center; font-weight: bold;">
+      This site requires JavaScript to function properly. Please enable JavaScript in your browser settings.
+    </div>
+  </noscript>
+  <script src="script.js"></script>
 </body>
 </html>
