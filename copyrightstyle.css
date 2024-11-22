@@ -64,7 +64,7 @@ body
   align-items: center;
   justify-content: center;
   flex-basis: 100%;
-  margin: 65px;
+  margin: 55px;
 }
 .sv-logo
 {
@@ -82,7 +82,7 @@ body
   height: 70px;
 }
 /* Custom Context Menu Styles */
-#custom-context-menu
+#custom-menu
 {
   position: absolute;
   display: none;
@@ -93,13 +93,13 @@ body
   z-index: 1000;
   padding: 10px;
 }
-#custom-context-menu ul 
+#custom-menu ul 
 {
   list-style: none;
   margin: 0;
   padding: 0px;
 }
-#custom-context-menu ul li 
+#custom-menu ul li 
 {
   padding: 8px 20px;
   cursor: pointer;
@@ -108,7 +108,7 @@ body
   border-bottom-left-radius: 20px 20px;
   border-bottom-right-radius: 20px 20px;
 }
-#custom-context-menu ul li:hover 
+#custom-menu ul li:hover 
 {
   background: #ff0000;
 }

@@ -143,8 +143,7 @@ scrollToTopButton.addEventListener("click", function(event) // Scroll smoothly t
 const contextMenu = document.getElementById("custom-context-menu");
 const openNewTabOption = document.getElementById("open-new-tab");
 let targetLink = null; // To store the link being clicked
-// Show custom context menu
-document.addEventListener("contextmenu", (event) => {
+document.addEventListener("contextmenu", (event) => { // Show custom context menu
   event.preventDefault(); // Prevent the default context menu
   contextMenu.style.display = "block";
   contextMenu.style.left = `${event.pageX}px`;
@@ -159,12 +158,10 @@ document.addEventListener("contextmenu", (event) => {
     openNewTabOption.style.display = "none"; // Hide the option
   }
 });
-// Hide custom context menu on click
-document.addEventListener("click", () => {
+document.addEventListener("click", () => { // Hide custom context menu on click
   contextMenu.style.display = "none";
 });
-// Handle custom context menu actions
-document.getElementById("back").addEventListener("click", () => {
+document.getElementById("back").addEventListener("click", () => { // Handle custom context menu actions
   window.history.back();
 });
 document.getElementById("forward").addEventListener("click", () => {
