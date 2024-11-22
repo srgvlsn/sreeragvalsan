@@ -112,7 +112,7 @@ scrollToTopButton.addEventListener("click", function(event) // Scroll smoothly t
 //   if (contextMenu.style.display === "block") {
 //     contextMenu.style.display = "none";
 //   }
-// });
+// }); Kept for previous references
 // 
 
 // 
@@ -136,7 +136,7 @@ scrollToTopButton.addEventListener("click", function(event) // Scroll smoothly t
 // });
 // document.getElementById("reload").addEventListener("click", () => {
 //   location.reload();
-// });
+// });Kept for previous references
 // 
 
 //
