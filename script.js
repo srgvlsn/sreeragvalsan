@@ -71,7 +71,7 @@ window.onscroll = function() // Show or hide the button based on scroll position
   // {
   //   scrollToTopButton.style.display = "block"; // Show button
   // }
-  // else                               kept for previous usage reference
+  // else                               //kept for previous usage reference
   // {
   //   scrollToTopButton.style.display = "none"; // Hide button
   // }
