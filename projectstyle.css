@@ -197,7 +197,7 @@ nav ul li a:hover::after
   color: #080808;
   background: #c71414;
   display: block;
-  margin: 50px auto 125px;
+  margin: 50px auto;
   width: fit-content;
   border: 3px solid #cd1d20;
   padding: 14px 50px;
@@ -324,7 +324,6 @@ hr
   flex-wrap: wrap;
   height: 100px;
   background-color: #0f0d0d17;
-  
 }
 .footer-greetings
 {
@@ -374,12 +373,6 @@ hr
 {
   font-size: 5px;
 }
-#message
-{
-  color: #c48954;
-  margin-top: -10px;
-  display: block;
-}
 /* top scroller */
 #scrollToTop
 {
@@ -413,7 +406,6 @@ hr
   background-color: #ff0000;
   color: #0a0a0a;
 }
-
 nav .fa-solid /*.fa-xmark, nav .fa-bars */
 {
   display: none;
@@ -699,7 +691,6 @@ nav .fa-solid /*.fa-xmark, nav .fa-bars */
   .btn.btn2
   {
     margin-bottom: -20px;
-    
   }
   #footer .container
   {
