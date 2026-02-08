@@ -82,7 +82,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #ffffff;
+  color: var(--text-color);
   font-size: 16px;
   position: relative;
   font-family: 'sans-b';
@@ -165,7 +165,8 @@ nav ul li a:hover::after {
   font-size: 50px;
   margin-bottom: 20px;
   font-family: 'sans-b';
-  color: rgba(205, 29, 32, 0.7);
+  color: var(--primary-red);
+  opacity: 0.7;
   /* Using primary red alpha */
 }
 
@@ -278,7 +279,7 @@ nav ul li a:hover::after {
 .skills-list div:hover {
   background: #0e0e0e;
   transform: scale(1.1);
-  color: #ffffff;
+  color: var(--text-color);
 }
 
 .skills-list div:hover img {
@@ -298,7 +299,7 @@ nav ul li a:hover::after {
 }
 
 .services-list div {
-  background: #111111;
+  background: var(--card-bg);
   padding: 40px;
   font-size: 14px;
   font-weight: 300;
@@ -350,11 +351,11 @@ nav ul li a:hover::after {
 }
 
 .services-list div:hover a {
-  color: #ffffff;
+  color: var(--text-color);
 }
 
 .services-list div:hover a span.material-symbols-outlined {
-  color: #ffffff;
+  color: var(--text-color);
 }
 
 /* Projects Section */
@@ -415,7 +416,7 @@ nav ul li a:hover::after {
   line-height: 50px;
   width: 50px;
   height: 50px;
-  background-color: #ffffff;
+  background-color: var(--text-color);
   border-radius: 50px;
   text-align: center;
 }
@@ -436,13 +437,13 @@ nav ul li a:hover::after {
   padding: 14px 50px;
   border-radius: 6px;
   text-decoration: none;
-  color: #ffffff;
+  color: var(--text-color);
   transition: background 0.5s;
 }
 
 .btn:hover {
   color: #080808;
-  background: #c71414;
+  background: var(--primary-red);
 }
 
 /* Contact Section */
@@ -460,7 +461,7 @@ nav ul li a:hover::after {
 
 .contact-left p a {
   text-decoration: none;
-  color: #ffffff;
+  color: var(--text-color);
 }
 
 .fa-envelope,
@@ -473,13 +474,13 @@ nav ul li a:hover::after {
   padding-top: 6px;
   text-align: center;
   color: #080808;
-  background-color: #c71414;
+  background-color: var(--primary-red);
 }
 
 .fa-globe:hover,
 .fa-envelope:hover,
 .fa-phone:hover {
-  color: #ffffff;
+  color: var(--text-color);
 }
 
 .social-icons {
@@ -490,7 +491,7 @@ nav ul li a:hover::after {
   text-decoration: none;
   font-size: 20px;
   margin: 20px 20px 20px 0px;
-  color: #ff0000;
+  color: var(--primary-red);
   display: inline-block;
   line-height: 50px;
   width: 50px;
@@ -498,19 +499,19 @@ nav ul li a:hover::after {
   border-radius: 50px;
   align-items: center;
   text-align: center;
-  background-color: #ffffff;
+  background-color: var(--text-color);
   transition: transform 0.2s;
 }
 
 .social-icons a:hover {
-  color: #ffffff;
-  background-color: #ff0000;
+  color: var(--text-color);
+  background-color: var(--primary-red);
   transform: translateY(-5px);
 }
 
 .btn.btn2 {
   display: inline-block;
-  background: #c71414;
+  background: var(--primary-red);
 }
 
 .contact-right {
@@ -527,16 +528,16 @@ form textarea {
   border: 0;
   border-radius: 30px;
   outline: none;
-  background: #262626;
+  background: var(--form-bg);
   padding: 15px;
   margin: 15px 0;
-  color: #ffffff;
+  color: var(--text-color);
   font-size: 15px;
 }
 
 form input::placeholder,
 form textarea::placeholder {
-  color: #8b8b8b;
+  color: var(--placeholder-color);
 }
 
 form .btn2 {
@@ -594,12 +595,12 @@ hr {
 }
 
 .copyright-alert {
-  color: #fff;
+  color: var(--text-color);
   text-decoration: none;
 }
 
 .copyright-alert:hover {
-  color: #ff0000;
+  color: var(--primary-red);
 }
 
 .footer-copyright .fa-copyright {
@@ -630,7 +631,7 @@ hr {
   bottom: 25px;
   right: 25px;
   background-color: #c71414;
-  color: #ffffff;
+  color: var(--text-color);
   border-radius: 50%;
   padding: 10px;
   text-align: center;
@@ -703,7 +704,7 @@ nav .fa-solid
   }
 
   nav ul {
-    background: #cd1d20;
+    background: var(--primary-red);
     position: fixed;
     top: 0;
     right: -250px;
@@ -734,7 +735,7 @@ nav .fa-solid
   .skills-list div {
     width: auto;
     height: 150px;
-    background: #111111;
+    background: var(--card-bg);
   }
 
   .skills-list div img {
@@ -744,9 +745,9 @@ nav .fa-solid
   }
 
   .skills-list div:hover {
-    background: #111111;
+    background: var(--card-bg);
     transform: scale(1.1);
-    color: #ffffff;
+    color: var(--text-color);
   }
 
   .about-column-1,
@@ -816,7 +817,7 @@ nav .fa-solid
   }
 
   .copyright-alert {
-    color: #ff0000;
+    color: var(--primary-red);
     text-decoration: none;
   }
 }
@@ -845,7 +846,7 @@ nav .fa-solid
   .skills-list div {
     width: auto;
     height: 150px;
-    background: #111111;
+    background: var(--card-bg);
   }
 
   .skills-list div img {
@@ -855,9 +856,9 @@ nav .fa-solid
   }
 
   .skills-list div:hover {
-    background: #111111;
+    background: var(--card-bg);
     transform: scale(1.1);
-    color: #ffffff;
+    color: var(--text-color);
   }
 
   .about-column-2 p {
@@ -895,7 +896,7 @@ nav .fa-solid
   }
 
   .copyright-alert {
-    color: #ff0000;
+    color: var(--primary-red);
     text-decoration: none;
   }
 }
@@ -925,7 +926,7 @@ nav .fa-solid
   }
 
   nav ul {
-    background: #cd1d20;
+    background: var(--primary-red);
     position: fixed;
     top: 0;
     right: -250px;
@@ -951,7 +952,7 @@ nav .fa-solid
   .skills-list div {
     width: auto;
     height: 150px;
-    background: #111111;
+    background: var(--card-bg);
   }
 
   .skills-list div img {
@@ -961,9 +962,9 @@ nav .fa-solid
   }
 
   .skills-list div:hover {
-    background: #111111;
+    background: var(--card-bg);
     transform: scale(1.1);
-    color: #ffffff;
+    color: var(--text-color);
   }
 
   .about-column-1,
@@ -1018,7 +1019,7 @@ nav .fa-solid
   }
 
   .copyright-alert {
-    color: #ff0000;
+    color: var(--primary-red);
     text-decoration: none;
   }
 }
@@ -1043,7 +1044,7 @@ nav .fa-solid
   }
 
   nav ul {
-    background: #cd1d20;
+    background: var(--primary-red);
     position: fixed;
     top: 0;
     right: -250px;
@@ -1069,7 +1070,7 @@ nav .fa-solid
   .skills-list div {
     width: auto;
     height: 150px;
-    background: #111111;
+    background: var(--card-bg);
   }
 
   .skills-list div img {
@@ -1079,9 +1080,9 @@ nav .fa-solid
   }
 
   .skills-list div:hover {
-    background: #111111;
+    background: var(--card-bg);
     transform: scale(1.1);
-    color: #ffffff;
+    color: var(--text-color);
   }
 }
 
@@ -1107,7 +1108,7 @@ nav .fa-solid
   .skills-list div {
     width: auto;
     height: 150px;
-    background: #111111;
+    background: var(--card-bg);
   }
 
   .skills-list div img {
@@ -1117,9 +1118,9 @@ nav .fa-solid
   }
 
   .skills-list div:hover {
-    background: #111111;
+    background: var(--card-bg);
     transform: scale(1.1);
-    color: #ffffff;
+    color: var(--text-color);
   }
 }
 
@@ -1135,7 +1136,7 @@ nav .fa-solid
   .skills-list div {
     width: auto;
     height: 150px;
-    background: #111111;
+    background: var(--card-bg);
   }
 
   .skills-list div img {
@@ -1145,9 +1146,9 @@ nav .fa-solid
   }
 
   .skills-list div:hover {
-    background: #111111;
+    background: var(--card-bg);
     transform: scale(1.1);
-    color: #ffffff;
+    color: var(--text-color);
   }
 }
 
