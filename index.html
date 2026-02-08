@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="portfolio website">
@@ -10,14 +11,16 @@
   <title>Sreerag Valsan's Portfolio</title>
   <link rel="icon" type="image/icon" href="./logos/SV.black.favicon-large.ico">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <script src="https://kit.fontawesome.com/6591f3cf48.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
   <!-- Header -->
   <div id="header">
     <nav>
-      <a href="index.html" class="logo" alt="Property of srgvlsn&trade;"><img src="logos/SV.white.header.svg" type="image/svg" class="logo" alt="srgvlsn Logo"></a>
+      <a href="index.html" class="logo"><img src="logos/SV.white.header.svg" class="logo" alt="srgvlsn Logo"></a>
       <ul id="sidemenu">
         <li><a href="#header">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -25,149 +28,176 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
-        <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+        <i class="fa-solid fa-xmark" onclick="closeMenu()" role="button" aria-label="Close Menu" tabindex="0"></i>
       </ul>
-      <i class="fa-solid fa-burger" onclick="openMenu()"></i>
+      <i class="fa-solid fa-burger" onclick="openMenu()" role="button" aria-label="Open Menu" tabindex="0"></i>
     </nav>
     <div class="container">
       <div class="header-text">
         <p>Hi! WELCOME TO MY WEBSITE</p>
         <h1>I'm <span>Sreerag Valsan</span></h1>
-        <p>I aspire to be part of the data world, where I can explore data science, data analysis, and data engineering<br> to make better decisions and drive innovation. </p>
+        <p>I aspire to be part of the data world, where I can explore data science, data analysis, and data
+          engineering<br> to make better decisions and drive innovation. </p>
       </div>
     </div>
   </div>
-  <!-- About Section -->
-  <div id="about">
-    <div class="container">
-      <div class="row">
-        <div class="about-column-1">
-          <img src="./images/about_col1.webp" alt="about image" loading="lazy">
-        </div>
-        <div class="about-column-2">
-          <h1 class="header-li-titles">About Me</h1>
-          <p>
-            I am Sreerag T Valsan, a programmer based in Kochi, Kerala, India. I studied B.Tech Mechanical Engineering. But, I am passionate about enhancing my coding skills and deriving insights from data. I intend to incorporate my knowledge in both fields to drive innovations. I have a strong love for learning new things and am open to unlearning when necessary. I enjoy reading, watching tech videos, and staying up to date about what's happening around the world. In the free time I enjoy photography, travelling, driving, cooking, drawing, and gaming.
-          </p>
-          <div class="about-subtabs">
-            <p class="about-subtabs-links active-link" onclick="openTab('Skills')">Skills</p>
-            <p class="about-subtabs-links" onclick="openTab('Education')">Education</p>
-            <p class="about-subtabs-links" onclick="openTab('Experience')">Experience</p>
+
+  <div id="main-content">
+    <!-- About Section -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-column-1">
+            <img src="./images/about_col1.webp" alt="about image" loading="lazy">
           </div>
-          <div class="about-subtabs-contents active-tab" id="Skills">
-            <ul>
-              <li>
-                <span>Web Designing</span><br><p>Using HTML5, CSS3 and JavaScript</p>
-              </li>
-              <li>
-                <span>Programming Languages</span><p> C, Java, Python and R </p>
-              </li>
-              <li>
-                <span>Mathematics</span><br><p>Basic Mathematics and Engineering Calculus</p>
-              </li>
-              <li>
-                <span>Data Science with Python</span><br><p>Using Python and libraries alongside tools and frameworks for Data Manipulation, Analysis, and Visualization.</p>
-              </li>
-              <li>
-                <span>Office Productivity with Microsoft</span><br><p>Using MS Powerpoint, MS Excel and MS Word</p>
-              </li>
-            </ul>
-          </div>
-          <div class="about-subtabs-contents" id="Education">
-            <ul>
-              <li><span>B. Tech Mechanical Engineering</span><br><p>A.P.J. Abdul Kalam Technical University, Kerala<br>August 2017 - May 2021</p></li>
-              <li><span>Higher Secondary Education</span><br><p>Directorate of Higher Secondary Education<br>July 2014 - May 2016</p></li>
-              <li><span>High School Education</span><br><p>Board of Public Examinations<br>May 2014</p></li>
-            </ul>
-          </div>
-          <div class="about-subtabs-contents" id="Experience">
-            <ul>
-              <li><span>Data Science Intern</span><br><p>Brototype.com &nbsp;<br>August 2024 - Present</p></li>
-              <li><span>Mechanical Engineering Trainee</span><br><p>Armstech Engineers Pvt. Ltd. &nbsp;<br>July 2022 - Decemeber 2022</p></li>
-            </ul>
+          <div class="about-column-2">
+            <h1 class="header-li-titles">About Me</h1>
+            <p>
+              I am Sreerag T Valsan, a programmer based in Kochi, Kerala, India. I studied B.Tech Mechanical
+              Engineering.
+              But, I am passionate about enhancing my coding skills and deriving insights from data. I intend to
+              incorporate my knowledge in both fields to drive innovations. I have a strong love for learning new things
+              and am open to unlearning when necessary. I enjoy reading, watching tech videos, and staying up to date
+              about what's happening around the world. In the free time I enjoy photography, travelling, driving,
+              cooking,
+              drawing, and gaming.
+            </p>
+            <div class="about-subtabs">
+              <p class="about-subtabs-links active-link" onclick="openTab(event, 'Skills')">Skills</p>
+              <p class="about-subtabs-links" onclick="openTab(event, 'Education')">Education</p>
+              <p class="about-subtabs-links" onclick="openTab(event, 'Experience')">Experience</p>
+            </div>
+            <div class="about-subtabs-contents active-tab" id="Skills">
+              <ul>
+                <li>
+                  <span>Web Designing</span><br>
+                  <p>Using HTML5, CSS3 and JavaScript</p>
+                </li>
+                <li>
+                  <span>Programming Languages</span>
+                  <p> C, Java, Python and R </p>
+                </li>
+                <li>
+                  <span>Mathematics</span><br>
+                  <p>Basic Mathematics and Engineering Calculus</p>
+                </li>
+                <li>
+                  <span>Data Science with Python</span><br>
+                  <p>Using Python and libraries alongside tools and frameworks for Data Manipulation, Analysis, and
+                    Visualization.</p>
+                </li>
+                <li>
+                  <span>Office Productivity with Microsoft</span><br>
+                  <p>Using MS Powerpoint, MS Excel and MS Word</p>
+                </li>
+              </ul>
+            </div>
+            <div class="about-subtabs-contents" id="Education">
+              <ul>
+                <li><span>B. Tech Mechanical Engineering</span><br>
+                  <p>A.P.J. Abdul Kalam Technical University, Kerala<br>August 2017 - May 2021</p>
+                </li>
+                <li><span>Higher Secondary Education</span><br>
+                  <p>Directorate of Higher Secondary Education<br>July 2014 - May 2016</p>
+                </li>
+                <li><span>High School Education</span><br>
+                  <p>Board of Public Examinations<br>May 2014</p>
+                </li>
+              </ul>
+            </div>
+            <div class="about-subtabs-contents" id="Experience">
+              <ul>
+                <li><span>Data Science Intern</span><br>
+                  <p>Brototype.com &nbsp;<br>August 2024 - Present</p>
+                </li>
+                <li><span>Mechanical Engineering Trainee</span><br>
+                  <p>Armstech Engineers Pvt. Ltd. &nbsp;<br>July 2022 - December 2022</p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Skills Section -->
-  <div id="skills">
-    <div class="container">
-      <h1 class="header-li-titles">My Skills and Abilities</h1>
-      <div class="skills-list">
-        <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank" aria-label="Python">
-          <div class="skill-python">
-            <img src="./skillslogos/icons8-python-96.png" alt="python logo" aria-label="Python">
-            <p>Python</p>
-          </div>
-        </a>
-        <a href="https://en.wikipedia.org/wiki/NumPy" target="_blank" aria-label="NumPy">
-          <div class="skill-numpy">
-            <img src="./skillslogos/icons8-numpy-96.png" alt="numpy logo" aria-label="NumPy">
-            <p>NumPy</p>
-          </div>
-        </a>
-        <a href="https://en.wikipedia.org/wiki/SciPy" target="_blank" aria-label="SciPy">
-          <div class="skill-scipy">
-            <img src="./skillslogos/icons8-scipy-100.png" alt="scipy logo" aria-label="SciPy">
-            <p>SciPy</p>
-          </div>
-        </a>
-        <a href="https://en.wikipedia.org/wiki/Pandas_(software)" target="_blank" aria-label="Pandas">
-          <div class="skill-pandas">
-            <img src="./skillslogos/icons8-pandas-96.png" alt="pandas logo" aria-label="Pandas">
-            <p>Pandas</p>
-          </div>
-        </a>        
-        <a href="https://en.wikipedia.org/wiki/Matplotlib" target="_blank" aria-label="MatPlotLib">
-          <div class="skill-matplotlib">
-            <img src="./skillslogos/icons8-matplotlib-96.png" alt="matplotlib logo" aria-label="MatPlotLib">
-            <p>MatPlotLib</p>
-          </div>
-        </a>
-        <a href="https://en.wikipedia.org/wiki/Matplotlib" target="_blank" aria-label="Seaborn">
-          <div class="skill-seaborn">
-            <img src="./skillslogos/icons8-seaborn-96.png" alt="seaborn logo" aria-label="Seaborn">
-            <p>Seaborn</p>
-          </div>
-        </a>
-        <a href="https://en.wikipedia.org/wiki/Project_Jupyter" target="_blank" aria-label="Project Jupyter">
-          <div class="skill-jupyter">
-            <img src="./skillslogos/icons8-jupyter-96.png" alt="jupyter logo" aria-label="Jupyter Notebooks">
-            <p>Jupyter</p>
-          </div>
-        </a>
-        <a href="https://en.wikipedia.org/wiki/Tableau_Software" target="_blank" aria-label="Tableau Software">
-          <div class="skill-tableau">
-            <img src="./skillslogos/icons8-tableau-software-96.png" alt="tableau logo" aria-label="Tableau">
-            <p>Tableau</p>
-          </div>
-        </a>
-        <a href="https://en.wikipedia.org/wiki/Microsoft_Power_BI" target="_blank" aria-label="Microsoft Power BI">
-          <div class="skill-powerbi">
-            <img src="./skillslogos/icons8-power-bi-2021-96.png" alt="powerbi logo" aria-label="Power BI">
-            <p>Tableau</p>
-          </div>
-        </a>
-        <a href="https://en.wikipedia.org/wiki/Calculus" target="_blank" aria-label="Calculus">
-          <div class="skill-calculus">
-            <img src="./skillslogos/icons8-calculus-96.png" alt="calculus logo" aria-label="Calculus">
-            <p>Calculus</p>
-          </div>
-        </a>
-        <a href="https://en.wikipedia.org/wiki/Statistics" target="_blank" aria-label="Statistics">
-          <div class="skill-maths">
-            <img src="./skillslogos/icons8-statistics-96.png" alt="statistics logo" aria-label="Statistics">
-            <p>Statistics</p>
-          </div>
-        </a>
-        <a href="https://en.wikipedia.org/wiki/Spreadsheet" target="_blank" aria-label="Spreadsheet Program">
-          <div class="skill-excel">
-            <img src="./skillslogos/icons8-excel-96.png" alt="excel logo" aria-label="MS Excel">
-            <p>Excel</p>
-          </div>
-        </a>
-        <!-- 
+
+    <!-- Skills Section -->
+    <div id="skills">
+      <div class="container">
+        <h1 class="header-li-titles">My Skills and Abilities</h1>
+        <div class="skills-list">
+          <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank" aria-label="Python">
+            <div class="skill-python">
+              <img src="./skillslogos/icons8-python-96.png" alt="python logo" aria-label="Python">
+              <p>Python</p>
+            </div>
+          </a>
+          <a href="https://en.wikipedia.org/wiki/NumPy" target="_blank" aria-label="NumPy">
+            <div class="skill-numpy">
+              <img src="./skillslogos/icons8-numpy-96.png" alt="numpy logo" aria-label="NumPy">
+              <p>NumPy</p>
+            </div>
+          </a>
+          <a href="https://en.wikipedia.org/wiki/SciPy" target="_blank" aria-label="SciPy">
+            <div class="skill-scipy">
+              <img src="./skillslogos/icons8-scipy-100.png" alt="scipy logo" aria-label="SciPy">
+              <p>SciPy</p>
+            </div>
+          </a>
+          <a href="https://en.wikipedia.org/wiki/Pandas_(software)" target="_blank" aria-label="Pandas">
+            <div class="skill-pandas">
+              <img src="./skillslogos/icons8-pandas-96.png" alt="pandas logo" aria-label="Pandas">
+              <p>Pandas</p>
+            </div>
+          </a>
+          <a href="https://en.wikipedia.org/wiki/Matplotlib" target="_blank" aria-label="MatPlotLib">
+            <div class="skill-matplotlib">
+              <img src="./skillslogos/icons8-matplotlib-96.png" alt="matplotlib logo" aria-label="MatPlotLib">
+              <p>MatPlotLib</p>
+            </div>
+          </a>
+          <a href="https://en.wikipedia.org/wiki/Matplotlib" target="_blank" aria-label="Seaborn">
+            <div class="skill-seaborn">
+              <img src="./skillslogos/icons8-seaborn-96.png" alt="seaborn logo" aria-label="Seaborn">
+              <p>Seaborn</p>
+            </div>
+          </a>
+          <a href="https://en.wikipedia.org/wiki/Project_Jupyter" target="_blank" aria-label="Project Jupyter">
+            <div class="skill-jupyter">
+              <img src="./skillslogos/icons8-jupyter-96.png" alt="jupyter logo" aria-label="Jupyter Notebooks">
+              <p>Jupyter</p>
+            </div>
+          </a>
+          <a href="https://en.wikipedia.org/wiki/Tableau_Software" target="_blank" aria-label="Tableau Software">
+            <div class="skill-tableau">
+              <img src="./skillslogos/icons8-tableau-software-96.png" alt="tableau logo" aria-label="Tableau">
+              <p>Tableau</p>
+            </div>
+          </a>
+          <a href="https://en.wikipedia.org/wiki/Microsoft_Power_BI" target="_blank" aria-label="Microsoft Power BI">
+            <div class="skill-powerbi">
+              <img src="./skillslogos/icons8-power-bi-2021-96.png" alt="powerbi logo" aria-label="Power BI">
+              <p>Power BI</p>
+            </div>
+          </a>
+          <a href="https://en.wikipedia.org/wiki/Calculus" target="_blank" aria-label="Calculus">
+            <div class="skill-calculus">
+              <img src="./skillslogos/icons8-calculus-96.png" alt="calculus logo" aria-label="Calculus">
+              <p>Calculus</p>
+            </div>
+          </a>
+          <a href="https://en.wikipedia.org/wiki/Statistics" target="_blank" aria-label="Statistics">
+            <div class="skill-maths">
+              <img src="./skillslogos/icons8-statistics-96.png" alt="statistics logo" aria-label="Statistics">
+              <p>Statistics</p>
+            </div>
+          </a>
+          <a href="https://en.wikipedia.org/wiki/Spreadsheet" target="_blank" aria-label="Spreadsheet Program">
+            <div class="skill-excel">
+              <img src="./skillslogos/icons8-excel-96.png" alt="excel logo" aria-label="MS Excel">
+              <p>Excel</p>
+            </div>
+          </a>
+          <!-- 
         <a href="https://en.wikipedia.org/wiki/Presentation_program" target="_blank" aria-label="Presentation Program">
           <div class="skill-powerpoint">
             <img src="./skillslogos/icons8-powerpoint-96.png" alt="powerpoint logo" aria-label="MS PowerPoint">
@@ -175,7 +205,7 @@
           </div>
         </a>
          -->
-        <!-- 
+          <!-- 
         <a href="https://en.wikipedia.org/wiki/Word_processor_program" target="_blank" aria-label="Word Proccesor Program">
           <div class="skill-word">
             <img src="./skillslogos/icons8-word-96.png" alt="word logo" aria-label="MS Word">
@@ -183,55 +213,56 @@
           </div>
         </a>
          -->
-        <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank" aria-label="C">
-          <div class="skill-c">
-            <img src="./skillslogos/icons8-c-96.png" alt="c logo" aria-label="C">
-            <p>C</p>
-          </div>
-        </a>
-        <a href="https://en.wikipedia.org/wiki/Java_(programming_language)" target="_blank" aria-label="Java">
-          <div class="skill-java">
-            <img src="./skillslogos/icons8-java-96.png" alt="java logo" aria-label="Java">
-            <p>Java</p>
-          </div>
-        </a>
-        <a href="https://en.wikipedia.org/wiki/HTML" target="_blank" aria-label="HTML">
-          <div class="skill-html5">
-            <img src="./skillslogos/icons8-html-96.png" alt="html logo" aria-label="HTML 5">
-            <p>HTML5</p>
-          </div>
-        </a>
-        <a href="https://en.wikipedia.org/wiki/CSS" target="_blank" aria-label="CSS">
-          <div class="skill-css3">
-            <img src="./skillslogos/icons8-css-96.png" alt="css logo" aria-label="CSS 3">
-            <p>CSS3</p>
-          </div>
-        </a>
-        <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" aria-label="JavaScript">
-          <div class="skill-js">
-            <img src="./skillslogos/icons8-javascript-96.png" alt="javascript logo" aria-label="JavaScript">
-            <p>JavaScript</p>
-          </div>
-        </a>
-        <a href="https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)" target="_blank" aria-label="Bootstrap">
-          <div class="skill-bootstrap5">
-            <img src="./skillslogos/icons8-bootstrap-96.png" alt="bootstrap logo" aria-label="Bootstrap">
-            <p>Bootstrap</p>
-          </div>
-        </a>
-        <a href="https://en.wikipedia.org/wiki/Git" target="_blank" aria-label="Git">
-          <div class="skill-git">
-            <img src="./skillslogos/icons8-git-96.png" alt="git logo" aria-label="Git">
-            <p>Git</p>
-          </div>
-        </a>
-        <a href="https://en.wikipedia.org/wiki/GitHub" target="_blank" aria-label="GitHub">
-          <div class="skill-github">
-            <img src="./skillslogos/icons8-github-white-96.png" alt="github logo" aria-label="GitHub">
-            <p>GitHub</p>
-          </div>
-        </a>
-        <!-- 
+          <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank" aria-label="C">
+            <div class="skill-c">
+              <img src="./skillslogos/icons8-c-96.png" alt="c logo" aria-label="C">
+              <p>C</p>
+            </div>
+          </a>
+          <a href="https://en.wikipedia.org/wiki/Java_(programming_language)" target="_blank" aria-label="Java">
+            <div class="skill-java">
+              <img src="./skillslogos/icons8-java-96.png" alt="java logo" aria-label="Java">
+              <p>Java</p>
+            </div>
+          </a>
+          <a href="https://en.wikipedia.org/wiki/HTML" target="_blank" aria-label="HTML">
+            <div class="skill-html5">
+              <img src="./skillslogos/icons8-html-96.png" alt="html logo" aria-label="HTML 5">
+              <p>HTML5</p>
+            </div>
+          </a>
+          <a href="https://en.wikipedia.org/wiki/CSS" target="_blank" aria-label="CSS">
+            <div class="skill-css3">
+              <img src="./skillslogos/icons8-css-96.png" alt="css logo" aria-label="CSS 3">
+              <p>CSS3</p>
+            </div>
+          </a>
+          <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" aria-label="JavaScript">
+            <div class="skill-js">
+              <img src="./skillslogos/icons8-javascript-96.png" alt="javascript logo" aria-label="JavaScript">
+              <p>JavaScript</p>
+            </div>
+          </a>
+          <a href="https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)" target="_blank"
+            aria-label="Bootstrap">
+            <div class="skill-bootstrap5">
+              <img src="./skillslogos/icons8-bootstrap-96.png" alt="bootstrap logo" aria-label="Bootstrap">
+              <p>Bootstrap</p>
+            </div>
+          </a>
+          <a href="https://en.wikipedia.org/wiki/Git" target="_blank" aria-label="Git">
+            <div class="skill-git">
+              <img src="./skillslogos/icons8-git-96.png" alt="git logo" aria-label="Git">
+              <p>Git</p>
+            </div>
+          </a>
+          <a href="https://en.wikipedia.org/wiki/GitHub" target="_blank" aria-label="GitHub">
+            <div class="skill-github">
+              <img src="./skillslogos/icons8-github-white-96.png" alt="github logo" aria-label="GitHub">
+              <p>GitHub</p>
+            </div>
+          </a>
+          <!-- 
         <a href="https://en.wikipedia.org/wiki/Netlify" target="_blank" aria-label="Netlify">
           <div class="skill-netlify">
             <img src="./skillslogos/icons8-netlify-96.png" alt="netlify logo" aria-label="Netlify">
@@ -239,13 +270,13 @@
           </div>
         </a>
          -->
-        <a href="https://en.wikipedia.org/wiki/Adobe_Photoshop" target="_blank" aria-label="Adobe Photoshop">
-          <div class="skill-photoshop">
-            <img src="./skillslogos/icons8-photoshop-96.png" alt="photoshop logo" aria-label="Adobe Photoshop">
-            <p>Photoshop</p>
-          </div>
-        </a>
-        <!-- 
+          <a href="https://en.wikipedia.org/wiki/Adobe_Photoshop" target="_blank" aria-label="Adobe Photoshop">
+            <div class="skill-photoshop">
+              <img src="./skillslogos/icons8-photoshop-96.png" alt="photoshop logo" aria-label="Adobe Photoshop">
+              <p>Photoshop</p>
+            </div>
+          </a>
+          <!-- 
         <a href="https://en.wikipedia.org/wiki/Adobe_Lightroom" target="_blank" aria-label="Adobe Lightroom">
           <div class="skill-lightroom">
             <img src="./skillslogos/icons8-lightroom-96.png" alt="lightroom logo" aria-label="Adobe Lightroom">
@@ -253,13 +284,13 @@
           </div>
         </a>
          -->
-        <a href="https://en.wikipedia.org/wiki/Canva" target="_blank" aria-label="Canva">
-          <div class="skill-canva">
-            <img src="./skillslogos/icons8-canva-96.png" alt="canva logo" aria-label="Canva">
-            <p>Canva</p>
-          </div>
-        </a>
-        <!--         
+          <a href="https://en.wikipedia.org/wiki/Canva" target="_blank" aria-label="Canva">
+            <div class="skill-canva">
+              <img src="./skillslogos/icons8-canva-96.png" alt="canva logo" aria-label="Canva">
+              <p>Canva</p>
+            </div>
+          </a>
+          <!--         
         <a href="https://en.wikipedia.org/wiki/Figma" target="_blank" aria-label="Figma">
           <div class="skill-figma">
             <img src="./skillslogos/icons8-figma-96.png" alt="figma logo" aria-label="Figma">
@@ -267,13 +298,13 @@
           </div>
         </a>
          -->
-        <a href="https://en.wikipedia.org/wiki/AutoCAD" target="_blank" aria-label="AutoCAD">
-          <div class="skill-autocad">
-            <img src="./skillslogos/icons8-autocad-96.png" alt="autocad logo" aria-label="AutoCAD">
-            <p>AutoCAD</p>
-          </div>
-        </a>
-        <!--         
+          <a href="https://en.wikipedia.org/wiki/AutoCAD" target="_blank" aria-label="AutoCAD">
+            <div class="skill-autocad">
+              <img src="./skillslogos/icons8-autocad-96.png" alt="autocad logo" aria-label="AutoCAD">
+              <p>AutoCAD</p>
+            </div>
+          </a>
+          <!--         
         <a href="https://en.wikipedia.org/wiki/Davinci_Resolve" target="_blank" aria-label="Davinci Resolve">
           <div class="skill-autocad">
             <img src="./skillslogos/icons8-davinci-resolve-96.png" alt="autocad logo" aria-label="Davinci Resolve">
@@ -281,101 +312,127 @@
           </div>
         </a>
          -->
-      </div>
-    </div>
-  </div>
-  <!-- Service Section -->
-  <div id="services">
-    <div class="container">
-      <h1 class="header-li-titles">My Services</h1>
-      <div class="services-list">
-        <div>
-          <i class="fa-brands fa-python"></i>
-          <h2>Data Science with Python</h2>
-          <p>I specialize in Data Science with Python, utilizing numerous libraries available for Analysis, Manipulation and Visualization of data</p>
-          <a href="./projects.html#pythonwork">Learn More <span class="material-symbols-outlined">chevron_right</span></a>
-        </div>
-        <div>
-          <i class="fa-solid fa-code"></i>
-          <h2>Web Design</h2>
-          <p>I specialize in web design, utilizing HTML5, CSS3, JavaScript, and Bootstrap 5 to create engaging online experiences.</p>
-          <a href="./projects.html#webwork">Learn More <span class="material-symbols-outlined">chevron_right</span></a>
-        </div>
-        <div>
-          <i class="fa-solid fa-database"></i>
-          <h2>Coming Soon</h2>
-          <p>Keep in touch to receive updates in the future. I will keep on upskilling and be ready to be rocked.</p>
-          <a href="./projects.html#webwork">Learn More <span class="material-symbols-outlined">chevron_right</span></a>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Projects Section -->
-  <div id="projects">
-    <div class="container">
-      <h1 class="header-li-titles">Projects Made</h1>
-      <div class="project-list">
-        <div class="work" id="webwork">
-          <img src="./images/Work1_Netflix.webp" alt="Netflix.com Non-Responsive" loading="lazy">
-          <div class="layer">
-            <h3>Netflix.com Homepage</h3>
-            <p>Category: Web Designing</p>
-            <a href="https://srgvlsn.github.io/Netflix-Clone-Website/" target="_blank" aria-label="Netflix Clone Hosted on Github"><i class="fa-solid fa-up-right-from-square"></i></a>
+
+    <!-- Service Section -->
+    <div id="services">
+      <div class="container">
+        <h1 class="header-li-titles">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-brands fa-python"></i>
+            <h2>Data Science with Python</h2>
+            <p>I specialize in Data Science with Python, utilizing numerous libraries available for Analysis,
+              Manipulation
+              and Visualization of data</p>
+            <a href="./projects.html#pythonwork">Learn More <span
+                class="material-symbols-outlined">chevron_right</span></a>
           </div>
-        </div>
-        <div class="work">
-          <img src="./images/Work2_Starlink.webp" alt="Starlink.com Non-Responsive" loading="lazy">
-          <div class="layer">
-            <h3>Starlink.com Homepage</h3>
-            <p>Category: Web Designing</p>
-            <a href="https://srgvlsn.github.io/Starlink-Clone-Website/" target="_blank" aria-label="Starlink Clone Hosted on Github"><i class="fa-solid fa-up-right-from-square"></i></a>
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>I specialize in web design, utilizing HTML5, CSS3, JavaScript, and Bootstrap 5 to create engaging
+              online
+              experiences.</p>
+            <a href="./projects.html#webwork">Learn More <span
+                class="material-symbols-outlined">chevron_right</span></a>
           </div>
-        </div>
-        <div class="work">
-          <img src="./images/Work3_Netflix_responsive.webp" alt="Netflix.com Responsive" loading="lazy">
-          <div class="layer">
-            <h3>Netflix.com Homepage Responsive</h3>
-            <p>Category: Web Designing</p>
-            <a href="https://srgvlsn.github.io/Netflix-Clone-Responsive/" target="_blank" aria-label="Netflix Clone Responsive version Hosted on Github"><i class="fa-solid fa-up-right-from-square"></i></a>
+          <div>
+            <i class="fa-solid fa-database"></i>
+            <h2>Coming Soon</h2>
+            <p>Keep in touch to receive updates in the future. I will keep on upskilling and be ready to be rocked.
+            </p>
+            <a href="./projects.html#webwork">Learn More <span
+                class="material-symbols-outlined">chevron_right</span></a>
           </div>
         </div>
       </div>
-      <a href="./projects.html" class="btn" id="load-more">View All</a>
     </div>
-  </div>
-  <!-- Contact Section -->
-  <div id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="contact-left">
-          <h1 class="header-li-titles">Connect with Me</h1>
-          <p><a href="mailto:sreeragtvalsan@gmail.com" target="_blank" aria-label="Link to Mail services"><i class="fa-solid fa-envelope"></i>&nbsp; sreeragtvalsan@gmail.com</a></p>
-          <p><a href="tel:+919446308911" target="_blank" aria-label="Link to Phone service"><i class="fa-solid fa-phone"></i>&nbsp; +91 94463 08911</a></p>
-          <p><a href="https://maps.app.goo.gl/eqCLPDZg9xDHVyMt6" target="_blank" aria-label="Link to Google maps"><i class="fa-solid fa-globe"></i>&nbsp; 10°13'16.5"N 76°12'15.5"E</a></p>
-          <div class="social-icons">
-            <a href="https://www.linkedin.com/in/sreeragvalsan/" aria-label="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://www.github.com/srgvlsn" aria-label="GitHub" target="_blank"><i class="fa-brands fa-github-alt"></i></a>
-            <a href="https://www.facebook.com/srgvlsn" aria-label="FaceBook" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/srgvlsn/" aria-label="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.x.com/srgvlsn" aria-label="X" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://www.telegram.me/srgvlsn" aria-label="Telegram" target="_blank"><i class="fa-solid fa-paper-plane"></i></a>
+
+    <!-- Projects Section -->
+    <div id="projects">
+      <div class="container">
+        <h1 class="header-li-titles">Projects Made</h1>
+        <div class="project-list">
+          <div class="work" id="webwork">
+            <img src="./images/Work1_Netflix.webp" alt="Netflix.com Non-Responsive" loading="lazy">
+            <div class="layer">
+              <h3>Netflix.com Homepage</h3>
+              <p>Category: Web Designing</p>
+              <a href="https://srgvlsn.github.io/Netflix-Clone-Website/" target="_blank"
+                aria-label="Netflix Clone Hosted on Github"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
           </div>
-          <a href="./files/resume2023.pdf" class="btn btn2">View Resume</a>
+          <div class="work">
+            <img src="./images/Work2_Starlink.webp" alt="Starlink.com Non-Responsive" loading="lazy">
+            <div class="layer">
+              <h3>Starlink.com Homepage</h3>
+              <p>Category: Web Designing</p>
+              <a href="https://srgvlsn.github.io/Starlink-Clone-Website/" target="_blank"
+                aria-label="Starlink Clone Hosted on Github"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="./images/Work3_Netflix_responsive.webp" alt="Netflix.com Responsive" loading="lazy">
+            <div class="layer">
+              <h3>Netflix.com Homepage Responsive</h3>
+              <p>Category: Web Designing</p>
+              <a href="https://srgvlsn.github.io/Netflix-Clone-Responsive/" target="_blank"
+                aria-label="Netflix Clone Responsive version Hosted on Github"><i
+                  class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
         </div>
-        <div class="contact-right">
-          <form name="submit-to-google-sheet" id="contact">
-            <input type="text" name="Name" placeholder="Your Name" required>
-            <input type="email" name="Email" placeholder="Your E-Mail" required>
-            <textarea name="Message" rows="6" placeholder="Your Message for me"></textarea>
-            <button type="submit" class="btn btn2">Send</button>
-          </form>
-          <span id="message"></span>
-        </div>
+        <a href="./projects.html" class="btn" id="load-more">View All</a>
       </div>
     </div>
+
+    <!-- Contact Section -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="header-li-titles">Connect with Me</h1>
+            <p><a href="mailto:sreeragtvalsan@gmail.com" target="_blank" aria-label="Link to Mail services"><i
+                  class="fa-solid fa-envelope"></i>&nbsp; sreeragtvalsan@gmail.com</a></p>
+            <p><a href="tel:+919446308911" target="_blank" aria-label="Link to Phone service"><i
+                  class="fa-solid fa-phone"></i>&nbsp; +91 94463 08911</a></p>
+            <p><a href="https://maps.app.goo.gl/eqCLPDZg9xDHVyMt6" target="_blank" aria-label="Link to Google maps"><i
+                  class="fa-solid fa-globe"></i>&nbsp; 10°13'16.5"N
+                76°12'15.5"E</a></p>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/sreeragvalsan/" aria-label="LinkedIn" target="_blank"><i
+                  class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://www.github.com/srgvlsn" aria-label="GitHub" target="_blank"><i
+                  class="fa-brands fa-github-alt"></i></a>
+              <a href="https://www.facebook.com/srgvlsn" aria-label="FaceBook" target="_blank"><i
+                  class="fa-brands fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/srgvlsn/" aria-label="Instagram" target="_blank"><i
+                  class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.x.com/srgvlsn" aria-label="X" target="_blank"><i
+                  class="fa-brands fa-x-twitter"></i></a>
+              <a href="https://www.telegram.me/srgvlsn" aria-label="Telegram" target="_blank"><i
+                  class="fa-solid fa-paper-plane"></i></a>
+            </div>
+            <a href="./files/resume2023.pdf" class="btn btn2">View Resume</a>
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet" id="contact-form">
+              <input type="text" name="Name" placeholder="Your Name" required>
+              <input type="email" name="Email" placeholder="Your E-Mail" required>
+              <textarea name="Message" rows="6" placeholder="Your Message for me"></textarea>
+              <button type="submit" class="btn btn2">Send</button>
+            </form>
+            <span id="message"></span>
+          </div>
+        </div>
+      </div>
+      <a href="#" id="scrollToTop" class="scroll-to-top" title="Scroll to Top" aria-label="Scroll To Top Floater"><i
+          class="fa-solid fa-chevron-up"></i></a>
+    </div>
   </div>
-  <!-- Scroll to top -->
-  <a href="#" id="scrollToTop" class="scroll-to-top" title="Scroll to Top" aria-label="Scroll To Top Floater"><i class="fa-solid fa-chevron-up"></i></a>
   <hr>
   <!-- Footer -->
   <div id="footer">
@@ -384,10 +441,13 @@
         <p>Thank you for visiting my website.</p>
       </div>
       <div class="footer-logo">
-        <a href="./copyrightandprivacystatement.html" aria-label="Copyright Document Page" target="_blank"><img src="./logos/SV.black-round-removebg-preview.webp" alt="Footer Logo"></a>
+        <a href="./copyrightandprivacystatement.html" aria-label="Copyright Document Page" target="_blank"><img
+            src="./logos/SV.black-round-removebg-preview.webp" alt="Footer Logo"></a>
       </div>
       <div class="footer-copyright">
-        <p><a href="#" id="copyright-icon" class="copyright-alert" aria-label="Copyright policies alert"><i class="fa-regular fa-copyright"></i>&nbsp;srgvlsn<sup><i class="fa-solid fa-trademark"></i></sup></a> &nbsp;|&nbsp; By Sreerag Valsan</p>
+        <p><a href="#" id="copyright-icon" class="copyright-alert" aria-label="Copyright policies alert"><i
+              class="fa-regular fa-copyright"></i>&nbsp;srgvlsn<sup><i class="fa-solid fa-trademark"></i></sup></a>
+          &nbsp;|&nbsp; By <span>Sreerag Valsan</span></p>
       </div>
     </div>
   </div>
@@ -400,24 +460,8 @@
       <li id="reload">Reload</li>
     </ul>
   </div>
-  <!-- Script file and Form's Script -->
+  <!-- Script file handler -->
   <script src="script.js"></script>
-  <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxk6Agu8HuxXOV-TUEXcW-_Pb3N_i0rpNmAq3oPEGK6jIwq_sCczDzlEyT7exQ39TbB/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const message = document.getElementById('message')
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-          message.innerHTML = "Message Sent Sucessfully"
-          setTimeout(function(){
-            message.innerHTML = ""
-          },5000)
-          form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
 </body>
+
 </html>

@@ -1,178 +1,150 @@
-//
-var navbar = document.querySelector("nav");
+const navbar = document.querySelector("nav");
 function handleScroll() // Function to handle scroll events
 {
-  if (window.scrollY > 150) // Change 50 to your desired scroll threshold 
-  { 
-    navbar.classList.add("scrolled"); // Add class when scrolled
-  } 
-  else 
+  if (!navbar) return;
+  if (window.scrollY > 150) // Change threshold as needed 
   {
-    navbar.classList.remove("scrolled"); // Remove class when at the top
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
   }
 }
-window.addEventListener("scroll", handleScroll); // Attach scroll event listener
-//
+window.addEventListener("scroll", handleScroll);
 
-//
-var aboutSubtabsLinks = document.getElementsByClassName("about-subtabs-links");
-var aboutSubtabsContents = document.getElementsByClassName("about-subtabs-contents");
-function openTab(tabName)
-{
-  for(aboutSubtabsLink of aboutSubtabsLinks)
-  {
-    aboutSubtabsLink.classList.remove("active-link");
+// About Tab Switching
+const aboutSubtabsLinks = document.getElementsByClassName("about-subtabs-links");
+const aboutSubtabsContents = document.getElementsByClassName("about-subtabs-contents");
+function openTab(event, tabName) {
+  if (!aboutSubtabsLinks.length || !aboutSubtabsContents.length) return;
+  for (let link of aboutSubtabsLinks) {
+    link.classList.remove("active-link");
   }
-  for(aboutSubtabsContent of aboutSubtabsContents)
-  {
-    aboutSubtabsContent.classList.remove("active-tab");
+  for (let content of aboutSubtabsContents) {
+    content.classList.remove("active-tab");
   }
-  event.currentTarget.classList.add("active-link")
-  document.getElementById(tabName).classList.add("active-tab");
-}
-//
-
-//
-var sidemenu = document.getElementById("sidemenu");
-function openMenu()
-{
-  sidemenu.style.right ="0";
-  document.addEventListener('click', closeMenuOnOutsideClick);
-}
-function closeMenu()
-{
-  sidemenu.style.right ="-250px";
-  document.removeEventListener('click', closeMenuOnOutsideClick);
-}
-function closeMenuOnOutsideClick(event) 
-{
-  var burgerIcon = document.querySelector(".fa-burger"); // Adjust selector if needed
-  if (!sidemenu.contains(event.target) && !burgerIcon.contains(event.target)) // Check if the clicked target is the sidemenu or burger icon
-  {
-    closeMenu(); // Close the menu if clicked outside
+  event.currentTarget.classList.add("active-link");
+  const targetTab = document.getElementById(tabName);
+  if (targetTab) {
+    targetTab.classList.add("active-tab");
   }
 }
-//
 
-//
-var copyrightIcon = document.getElementById("copyright-icon");// Get the copyright icon element
-copyrightIcon.addEventListener("click", function(event) // Add a click event listener to trigger the alert
-{
-  event.preventDefault(); // Prevent the default link behavior
-  alert('This is a copyright notice! \nPlease check it out in Copyright document \nAccess it by clicking on the logo on the footer');
-});
-//
-
-//
-var scrollToTopButton = document.getElementById("scrollToTop"); // Get the scroll to top button
-window.onscroll = function() // Show or hide the button based on scroll position 
-{
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) 
-  // {
-  //   scrollToTopButton.style.display = "block"; // Show button
-  // }
-  // else                               //kept for previous usage reference
-  // {
-  //   scrollToTopButton.style.display = "none"; // Hide button
-  // }
-  {
-    scrollToTopButton.classList.add("visible"); // Add 'visible' class to show the button smoothly
-  } 
-  else 
-  {
-    scrollToTopButton.classList.remove("visible"); // Remove 'visible' class to hide the button smoothly
+// Side Menu Control
+const sidemenu = document.getElementById("sidemenu");
+function openMenu() {
+  if (sidemenu) {
+    sidemenu.style.right = "0";
+    document.addEventListener('click', closeMenuOnOutsideClick);
   }
-};
-scrollToTopButton.addEventListener("click", function(event) // Scroll smoothly to the top when the button is clicked
-{
-  event.preventDefault(); // Prevent default link behavior
-  window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
-});
-//
+}
+function closeMenu() {
+  if (sidemenu) {
+    sidemenu.style.right = "-250px";
+    document.removeEventListener('click', closeMenuOnOutsideClick);
+  }
+}
+function closeMenuOnOutsideClick(event) {
+  const burgerIcon = document.querySelector(".fa-burger");
+  if (sidemenu && burgerIcon) {
+    if (!sidemenu.contains(event.target) && !burgerIcon.contains(event.target)) {
+      closeMenu();
+    }
+  }
+}
 
-//
-// document.addEventListener('contextmenu', function(event) 
-// {
-//   event.preventDefault(); // Prevent the default right-click context menu
-//   // alert("Right-click is disabled on this site.");
-// });
-//
+// Global Copyright Alert
+const copyrightIcon = document.getElementById("copyright-icon");
+if (copyrightIcon) {
+  copyrightIcon.addEventListener("click", function (event) {
+    event.preventDefault();
+    alert('This is a copyright notice! \nPlease check it out in Copyright document \nAccess it by clicking on the logo on the footer');
+  });
+}
 
-//
-// JavaScript for custom context menu
-// document.addEventListener("contextmenu", function (e) {
-//   e.preventDefault(); // Prevent default context menu
-//   const contextMenu = document.getElementById("custom-context-menu");
-//   contextMenu.style.display = "block";
-//   contextMenu.style.left = `${e.pageX}px`;
-//   contextMenu.style.top = `${e.pageY}px`;
-// });
-// document.addEventListener("click", function () {
-//   const contextMenu = document.getElementById("custom-context-menu");
-//   if (contextMenu.style.display === "block") {
-//     contextMenu.style.display = "none";
-//   }
-// }); Kept for previous references
-// 
+// Scroll To Top Utility
+const scrollToTopButton = document.getElementById("scrollToTop");
+if (scrollToTopButton) {
+  window.addEventListener("scroll", function () {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      scrollToTopButton.classList.add("visible");
+    } else {
+      scrollToTopButton.classList.remove("visible");
+    }
+  });
 
-// 
-// const contextMenu = document.getElementById("custom-context-menu"); // Show custom context menu
-// document.addEventListener("contextmenu", (event) => {
-//   event.preventDefault(); // Prevent the default context menu
-//   contextMenu.style.display = "block";
-//   contextMenu.style.left = `${event.pageX}px`;
-//   contextMenu.style.top = `${event.pageY}px`;
-// });
-// // Hide custom context menu on click
-// document.addEventListener("click", () => {
-//   contextMenu.style.display = "none";
-// });
-// // Handle custom context menu actions
-// document.getElementById("back").addEventListener("click", () => {
-//   window.history.back();
-// });
-// document.getElementById("forward").addEventListener("click", () => {
-//   window.history.forward();
-// });
-// document.getElementById("reload").addEventListener("click", () => {
-//   location.reload();
-// });Kept for previous references
-// 
+  scrollToTopButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
 
-//
+// Custom Context Menu
 const contextMenu = document.getElementById("custom-context-menu");
 const openNewTabOption = document.getElementById("open-new-tab");
-let targetLink = null; // To store the link being clicked
-document.addEventListener("contextmenu", (event) => { // Show custom context menu
-  event.preventDefault(); // Prevent the default context menu
-  contextMenu.style.display = "block";
-  contextMenu.style.left = `${event.pageX}px`;
-  contextMenu.style.top = `${event.pageY}px`;
-  // Check if the target is a link
-  if (event.target.tagName === "A") {
-    targetLink = event.target; // Store the link element
-    openNewTabOption.style.display = "block"; // Show the option
-  }
-  else {
-    targetLink = null; // Reset if not a link
-    openNewTabOption.style.display = "none"; // Hide the option
-  }
+let targetLink = null;
+if (contextMenu) {
+  document.addEventListener("contextmenu", (event) => {
+    event.preventDefault();
+    contextMenu.style.display = "block";
+    contextMenu.style.left = `${event.pageX}px`;
+    contextMenu.style.top = `${event.pageY}px`;
+    if (event.target.tagName === "A" || event.target.closest("a")) {
+      targetLink = event.target.tagName === "A" ? event.target : event.target.closest("a");
+      if (openNewTabOption) openNewTabOption.style.display = "block";
+    } else {
+      targetLink = null;
+      if (openNewTabOption) openNewTabOption.style.display = "none";
+    }
+  });
+}
+document.addEventListener("click", () => {
+  if (contextMenu) contextMenu.style.display = "none";
 });
-document.addEventListener("click", () => { // Hide custom context menu on click
-  contextMenu.style.display = "none";
-});
-document.getElementById("back").addEventListener("click", () => { // Handle custom context menu actions
-  window.history.back();
-});
-document.getElementById("forward").addEventListener("click", () => {
-  window.history.forward();
-});
-document.getElementById("reload").addEventListener("click", () => {
-  location.reload();
-});
-openNewTabOption.addEventListener("click", () => {
-  if (targetLink) {
-    window.open(targetLink.href, "_blank"); // Open the link in a new tab
-  }
-});
-// 
+
+const backBtn = document.getElementById("back");
+if (backBtn) {
+  backBtn.addEventListener("click", () => window.history.back());
+}
+
+const forwardBtn = document.getElementById("forward");
+if (forwardBtn) {
+  forwardBtn.addEventListener("click", () => window.history.forward());
+}
+
+const reloadBtn = document.getElementById("reload");
+if (reloadBtn) {
+  reloadBtn.addEventListener("click", () => location.reload());
+}
+
+if (openNewTabOption) {
+  openNewTabOption.addEventListener("click", () => {
+    if (targetLink) window.open(targetLink.href, "_blank");
+  });
+}
+
+// Contact Form Handler
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxk6Agu8HuxXOV-TUEXcW-_Pb3N_i0rpNmAq3oPEGK6jIwq_sCczDzlEyT7exQ39TbB/exec'
+const form = document.forms['submit-to-google-sheet']
+const messageDisplay = document.getElementById('message')
+if (form) {
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, {
+      method: 'POST',
+      body: new FormData(form)
+    })
+      .then(response => {
+        if (messageDisplay) {
+          messageDisplay.innerHTML = "Message Sent Successfully"
+          setTimeout(() => {
+            messageDisplay.innerHTML = ""
+          }, 5000)
+        }
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+}
